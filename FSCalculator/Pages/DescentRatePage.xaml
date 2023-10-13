@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FSCalculator.Pages.DescentRatePage"
+             Title="Descent Rate">
+
+    <FlexLayout Direction="Row"
+                AlignItems="Center"
+                JustifyContent="SpaceEvenly"
+                AlignContent="SpaceEvenly"
+                Wrap="Wrap">
+
+        <VerticalStackLayout>
+            <HorizontalStackLayout Spacing="20">
+                <VerticalStackLayout>
+                    <Label VerticalTextAlignment="Center">Groundspeed</Label>
+                    <Entry x:Name="groundSpeed"
+                           Placeholder="E.g. 300kts"
+                           MinimumWidthRequest="200"
+                           />
+                </VerticalStackLayout>
+                <VerticalStackLayout>
+                    <Label VerticalTextAlignment="Center">Wind</Label>
+                    <Entry x:Name="windAmount"
+                           Placeholder="+/- kts"
+                           MinimumWidthRequest="100"
+                           />
+                </VerticalStackLayout>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Margin="0,20,0,0">
+                <Button x:Name="calculateButton"
+                        Text="Calculate"
+                        Clicked="OnCalculateButtonClicked"
+                    />
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+
+        <Label
+            x:Name="resultLabel"
+            Text="0 fpm"
+            FontSize="50"
+            />
+
+    </FlexLayout>
+    
+</ContentPage>

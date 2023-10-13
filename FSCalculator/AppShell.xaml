@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="FSCalculator.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:FSCalculator"
+    xmlns:views="clr-namespace:FSCalculator.Pages"
+    Shell.FlyoutBehavior="Disabled">
+
+    <TabBar>
+        <ShellContent
+            Title="Top of Descent"
+            Icon="tod.png"
+            ContentTemplate="{DataTemplate views:TodPage}" />
+
+        <ShellContent
+            Title="Descent Rate"
+            Icon="descent_rate.png"
+            ContentTemplate="{DataTemplate views:DescentRatePage}" />
+    </TabBar>
+</Shell>
+ 
